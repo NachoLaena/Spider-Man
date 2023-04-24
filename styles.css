@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: fuente;
+    src: url(./fonts/HOMOARAK.TTF);
+}
+
+@font-face {
+    font-family: fuente2;
+    src: url(./fonts/blocktastic-itl.otf);
+}
+
+@font-face {
+    font-family: enemigos;
+    src: url(./fonts/good\ times\ rg.otf);
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background-image {
+    position: absolute;
+    background-image: url('https://images7.alphacoders.com/940/940633.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    filter: blur(2px);
+}
+
+.banner .logo-container {
+    display: flex;
+    object-fit: contain;
+    justify-content: center;
+    width: 25%;
+    border-radius: 50%;
+    height: auto;
+    z-index: 1;
+}
+
+.logo-container img {
+    border-radius: 50%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.logo-container img:hover {
+    transform: scale(1.1);
+    border-radius: 0%;
+}
+
+.banner header {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 20px;
+    font-family: Georgia;
+    background: linear-gradient(to top, #2B3784 5%, transparent);
+    color: rgb(255, 255, 255);
+}
+
+.banner ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.banner a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner li {
+    padding: 20px;
+    transition: all 0.5s;
+    width: 150px;
+    text-align: center;
+}
+
+.banner li:hover {
+    color: #DF1F2D;
+    transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+}
+
+main {
+    background-color: #2B3784
+}
+
+main section {
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    padding: 35px;
+    font-family: fuente;
+    font-size: 100px;
+    color: white;
+    height: 20%;
+}
+
+.info {
+    display: flex;
+    padding: 20px;
+    height: 80%;
+    align-items: center;
+}
+
+.img-container {
+    border-radius: 15rem 0 0 15rem;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info p {
+    display: flex;
+    color: white;
+    width: 70%;
+    height: 100%;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0 15rem 15rem 0;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    padding: 35px;
+    font-family: fuente2;
+    font-size: 85px;
+    color: white;
+    height: 20%;
+}
+
+.enemies-container {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    height: 80vh;
+    gap: 4px;
+    padding: 4px;
+}
+
+.enemies-container li {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.enemies-container img {
+    width: 100%;
+    height: 92%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+
+.enemies-container span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    -webkit-text-stroke: rgb(0, 0, 0) 2px;
+    font-family: enemigos;
+    height: 8%;
+}
+
+
+.duende-verde span {
+    color: #A9C53D;
+}
+
+.octopus span {
+    color: brown;
+}
+
+.sandman span {
+    color: sandybrown;
+}
+
+.rhino span {
+    color: silver;
+}
+
+.trajes-container {
+    display: flex;
+    height: 80vh;
+    justify-content: space-evenly;
+}
+
+.trajes {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 95%;
+}
+
+.trajes h3 {
+    font-family: fuente2;
+    color: #DF1F2D;
+    font-size: 30px;
+    text-align: center;
+    height: 8%
+}
+
+.trajes img {
+    border-radius: 50px 50px 0 0;
+    width: 100%;
+    height: 46%;
+    object-fit: cover;
+}
+
+.trajes p {
+    text-align: center;
+    color: white;
+    height: 46%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 50px 50px;
+
+}
+
+footer {
+    background-color: #252525;
+    color: white;
+    padding: 30px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media screen and (max-width:1400px) {
+    .trajes p {
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 70px;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    .info .img-container {
+        border-radius: 10rem 10rem 0 0;
+        width: 100%;
+        height: 30%;
+        overflow: hidden;
+    }
+
+    .info p {
+        width: 100%;
+        height: 70%;
+        border-radius: 0 0rem 10rem 10rem;
+        overflow-y: scroll;
+    }
+
+    .section-enemies {
+        height: 420vh;
+    }
+
+    h2 {
+        height: 172px;
+    }
+
+    .enemies-container {
+        flex-wrap: wrap;
+        align-items: none;
+    }
+
+    .section-trajes{
+        height: 260vh;
+    }
+
+    .trajes-container {
+        flex-wrap: wrap;
+    }
+
+    .trajes {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+
+    h2 {
+        height: 172px;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 40px;
+        height: 110px;
+    }
+
+    .section-trajes {
+        height: 250vh;
+    }
+}
